@@ -6,7 +6,15 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require('lazy').setup({
   spec = {
-    { 'KobraKommander9/KobraVim', import = 'kobra.plugins' },
+    {
+      'KobraKommander9/KobraVim',
+      opts = {
+        layouts = {
+          colemak = true,
+        },
+      },
+      import = 'kobra.plugins'
+    },
     -- import any extras modules here
     -- { import = 'kobra.plugins.extras.lang.go' },
     -- import/override with your plugins
